@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">Image Uploader</h1>
+<h1 align="center">Laravel 8 / Dropzone.js Image Uploader</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -8,11 +8,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://{your-demo-link.your-domain}">
+    <a href="http://stark-beyond-98915.herokuapp.com/images/create">
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://github.com/TheRplima/image-uploader">
       Solution
     </a>
     <span> | </span>
@@ -37,22 +37,17 @@
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+![screenshot](https://github.com/TheRplima/image-uploader/blob/master/public/assets/screenshot.png)
 
-Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
-
-- Where can I see your demo?
-- What was your experience?
-- What have you learned/improved?
-- Your wisdom? :)
+[Live version](http://stark-beyond-98915.herokuapp.com/images/create)
 
 ### Built With
 
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
 
-- [React](https://reactjs.org/)
-- [Vue.js](https://vuejs.org/)
-- [Tailwind](https://tailwindcss.com/)
+- [Laravel 8](https://laravel.com/)
+- [Dropzone.js](https://www.dropzone.dev/)
+- [Bootstrap 5](https://getbootstrap.com/)
 
 ## Features
 
@@ -60,21 +55,36 @@ Introduce your projects by taking a screenshot or a gif. Try to tell visitors a 
 
 This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/O2iGT9yBd6xZBrOcVirx) was to build an application to complete the given user stories.
 
+- I can drag and drop an image to upload it
+- I can choose to select an image from my folder
+- I can see a loader when uploading
+- When the image is uploaded, I can see the image and copy it
+- I can choose to copy to the clipboard
+
 ## How To Use
-
-<!-- Example: -->
-
-To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/your-user-name/your-project-name
+$ git clone https://github.com/TheRplima/image-uploader.git
 
 # Install dependencies
-$ npm install
+$ composer install
 
-# Run the app
-$ npm start
+# Configure the database connection on .env file
+DB_DATABASE=laravel_demo
+DB_USERNAME=demo
+DB_PASSWORD=demo123456
+
+# Generate key using bellow command
+$ php artisan key:generate
+
+# Run the migrations to create the tables
+$ php artisan migrate
+
+# Run the comand bellow to start the server
+$ php artisan serve
+
+# Go to link localhost:8000
 ```
 
 ## Acknowledgements
